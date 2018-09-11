@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
+import { FlexLayoutModule } from '@angular/flex-layout'
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MaterialModule } from './/material.module'
@@ -9,7 +10,13 @@ import { WeatherService } from './weather/weather.service'
 
 @NgModule({
   declarations: [AppComponent, CurrentWeatherComponent],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, MaterialModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+  ],
   providers: [WeatherService],
   bootstrap: [AppComponent],
 })
